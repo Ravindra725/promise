@@ -7,7 +7,15 @@
 </head>
 <body>
     <p style="font-size: 20px;">Q1. Write one example explaining how you can write a callback function.</p>
-    <pre style="color: blue;font-size: 20px;">ans: </pre>
+    <pre style="color: blue;font-size: 20px;">ans: 
+    function rk(callback){
+    console.log("hello callback")
+    callback();
+}
+function rkk(){
+    console.log("hello callback again")
+}
+rk(rkk)</pre>
     <pre style="font-size: 20px;">Q2. "Write a callback function to print numbers from 1 to 7, in which 1 should be printed after 1 sec, <br> 2 should be printed after 2 sec, 3 should be printed after 3 sec, and so on. 
 
 Explain callback hell.
