@@ -30,7 +30,28 @@ Numbers
 5
 6
 7"</pre>
-    <pre style="color: blue;font-size: 20px;">ans: </pre>
+    <pre style="color: blue;font-size: 20px;">ans:
+setTimeout(()=>{
+    console.log("1")
+    setTimeout(()=>{
+        console.log("2")
+        setTimeout(()=>{
+            console.log("3")
+            setTimeout(()=>{
+                console.log("4")
+                setTimeout(()=>{
+                    console.log("5")
+                    setTimeout(()=>{
+                        console.log("6")
+                        setTimeout(()=>{
+                            console.log("7")
+                        },7000)
+                    },6000)
+                },5000)
+            },4000)
+        },3000)
+    },2000)
+},1000)</pre>
     <pre style="font-size: 20px;">Q3. "Write the promise function to print numbers from 1 to 7, in which 1 should be printed after 1 sec, <br> 2 should be printed after 2 sec, 3 should be printed after 3 sec, and so on. 
 
 Numbers
