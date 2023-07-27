@@ -15,7 +15,10 @@
 function rkk(){
     console.log("hello callback again")
 }
-rk(rkk)</pre>
+rk(rkk):
+OutPut:
+hello callback
+hello callback again</pre>
     <pre style="font-size: 20px;">Q2. "Write a callback function to print numbers from 1 to 7, in which 1 should be printed after 1 sec, <br> 2 should be printed after 2 sec, 3 should be printed after 3 sec, and so on. 
 
 Explain callback hell.
@@ -43,9 +46,56 @@ Numbers
 then it should go to reject the state and catch the error and print Promise Rejected "</p>
     <pre style="color: blue;font-size: 20px;">ans: </pre>
     <p style="font-size: 20px;">Q5. Create examples to explain callback function</p>
-    <pre style="color: blue;font-size: 20px;">ans: </pre>
+    <pre style="color: blue;font-size: 20px;">ans: 
+function hm(callback){
+  console.log("hello")
+    callback();
+}
+function hmm(){
+    console.log("hello everyone")
+}
+hm(hmm);
+        
+OutPut:
+hello
+hello everyone</pre>
     <p style="font-size: 20px;">Q6. Create examples to explain callback hell function</p>
-    <pre style="color: blue;font-size: 20px;">ans: </pre>
+    <pre style="color: blue;font-size: 20px;">ans: 
+function rk(callback){
+    console.log("hello callback")
+    callback();
+}
+function rk1(callback){
+    console.log("hello callback again 1")
+    callback();
+}
+function rk2(callback){
+    console.log("hello callback again 2")
+    callback();
+}
+function rk3(callback){
+    console.log("hello callback again 3")
+    callback();
+}
+function rk4(callback){
+    console.log("hello callback again 4")
+}
+
+rk(()=>{
+    rk1(()=>{
+        rk2(()=>{
+            rk3(()=>{
+                rk4();
+            })
+        })
+    })
+})
+OutPut: 
+hello callback
+hello callback again 1
+hello callback again 2
+hello callback again 3
+hello callback again 4</pre>
     <p style="font-size: 20px;">Q7. Create examples to explain promises function</p>
     <pre style="color: blue;font-size: 20px;">ans: </pre>
     <p style="font-size: 20px;">Q8. Create examples to explain async await function</p>
